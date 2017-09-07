@@ -8,7 +8,7 @@ $parnode = $doc->appendChild($node);
 $connection=mysqli_connect('localhost', $username, $password);
 if (!$connection) {
 die('Not connected : ' . mysqli_error($connection));
-}
+} 
 
 /* 한글화 */
 mysqli_query($connection, "set session character_set_connection=utf8;");
