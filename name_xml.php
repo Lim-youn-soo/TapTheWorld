@@ -8,7 +8,7 @@ $parnode = $doc->appendChild($node);
 $connection=mysqli_connect('localhost', $username, $password);
 if (!$connection) {
 die('Not connected : ' . mysqli_error($connection));
-} 
+}
 
 /* 한글화 */
 mysqli_query($connection, "set session character_set_connection=utf8;");
@@ -33,7 +33,7 @@ header("Content-type: text/xml");
 // Iterate through the rows, adding XML nodes for each
 while ($row = @mysqli_fetch_assoc($result)){
 // Add to XML document node
-$node = $doc->createElement("marker");
+$node = $doc->createElement("list");
 $newnode = $parnode->appendChild($node);
 $newnode->setAttribute("name", $row['name']);
 $newnode->setAttribute("lat", $row['lat']);
